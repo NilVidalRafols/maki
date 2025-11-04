@@ -1,4 +1,22 @@
 
+# If the first argument coincides with the name of some other maki
+# command, then execute it
+if [[ $1 == "llm" ]]; then
+    stdin_cache=$(cat)
+    shift
+    printf '%s' "$stdin_cache" | mllm "$@"
+    exit 0
+
+elif [[ $1 == "map" ]]; then
+    shift
+    mmap "$@"
+    exit 0
+elif [[ $1 == "pmap" ]]; then
+    shift
+    mpmap "$@"
+    exit 0
+fi
+
 next_is_template=0
 
 for arg in "$@"; do
