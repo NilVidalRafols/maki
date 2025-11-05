@@ -2,9 +2,8 @@
 # If the first argument coincides with the name of some other maki
 # command, then execute it
 if [[ $1 == "llm" ]]; then
-    stdin_cache=$(cat)
     shift
-    printf '%s' "$stdin_cache" | mllm "$@"
+    mllm "$@"
     exit 0
 
 elif [[ $1 == "map" ]]; then
