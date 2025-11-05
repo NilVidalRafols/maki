@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 set -e
 
-
-echo "Installing maki to $INSTALL_DIR..."
-
 INSTALL_DIR="$HOME/.local/bin"
 GITHUB_RAW="https://raw.githubusercontent.com/NilVidalRafols/maki/main"
+
+echo "Installing maki to $INSTALL_DIR..."
 
 mkdir -p "$INSTALL_DIR"
 
