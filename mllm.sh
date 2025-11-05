@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-cached_stdin=$(cat)
 main_content=""
 system_content=""
 model=""
@@ -48,6 +47,10 @@ while [[ $# -gt 0 ]]; do
 done
 
 # Execute the maki command for main and system contents
+if [[ $pipe -eq 1 || $s_pipe -eq 1 ]]; then
+    cached_stdin=$(cat)
+fi
+
 if [[ $pipe -eq 1 ]]; then
     main_content="$(printf '%s' "$cached_stdin" | "${cmd[@]}")"$'\n'
 else
