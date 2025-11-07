@@ -26,7 +26,7 @@ for arg in "$@"; do
     elif [[ $next_is_template -eq 1 ]]; then
         # Try to find prompt file without extension
         found=0
-        for file in "$HOME/.prompts/$arg".*; do
+        for file in "$HOME/.config/maki/templates/$arg".*; do
             if [[ -f "$file" ]]; then
                 cat "$file"
                 found=1
@@ -34,7 +34,7 @@ for arg in "$@"; do
             fi
         done
         if [[ $found -eq 0 ]]; then
-            echo "template $arg not found in $HOME/.prompts/"
+            echo "template $arg not found in $HOME/.config/maki/templates/"
             exit 1
         fi
         next_is_template=0

@@ -21,6 +21,8 @@ chmod +x "$INSTALL_DIR/mmap"
 curl -fsSL "$GITHUB_RAW/mpmap.sh" -o "$INSTALL_DIR/mpmap"
 chmod +x "$INSTALL_DIR/mpmap"
 
+mkdir -p "$HOME/.config/maki/templates/"
+
 echo "Installation complete!"
 echo "You can run maki as maki or m. Maki's subcommands llm, map and pmap (parallel map) can also be directly executed as mllm, mmap and mpmap respectively."
 echo "If you are not able to run maki commands make sure that $INSTALL_DIR is present in your PATH variable"

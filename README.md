@@ -4,7 +4,7 @@ Maki is a simple yet powerful CLI tool for text processing. In its basic form, M
 ## Usage
 Different functionalities can be accessed using maki subcommands. If no subcommand is invoked, maki behaves as a content concatenation tool. You can provide contents in the following ways:
     - File paths.
-    - Template names. Using the option `-t` followed by a template name, maki will search for a matching file name (without taking the extension into account) in `$HOME/.maki-templates/`
+    - Template names. Using the option `-t` followed by a template name, maki will search for a matching file name (without taking the extension into account) in `$HOME/.config/maki/templates/`
     - Strings.
     - Stdin content. Add `-` where you want the contents to be placed.
 
@@ -19,7 +19,7 @@ The quick brown fox jumps over the lazy dog
 Lorem Ipsum
 foo, bar, baz
 ```
-Here, the files `./hello_world.txt` and `~/.maki-templates/fox.txt` have these contents respectively: "Hello World!", "The quick brown fox jumps over the lazy dog".
+Here, the files `./hello_world.txt` and `~/.config/maki/templates/fox.txt` have these contents respectively: "Hello World!", "The quick brown fox jumps over the lazy dog".
 
 Maki can also be run using the small command `m`.
 

@@ -15,5 +15,7 @@ rm -f "$INSTALL_DIR/mmap"
 
 rm -f "$INSTALL_DIR/mpmap"
 
+rm -rf "$HOME/.config/maki"
+
 echo "Uninstallation complete!"
 
